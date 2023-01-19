@@ -39,8 +39,9 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="img/nazar.png" alt="Nazarudin Zaini" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Nazarudin Zaini</h1>
-      <p class="lead">Student | Full Stack Developer</p>
+      <h1 class="display-4 myname">Nazarudin Zaini</h1>
+      <p class="lead"></p>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -277,6 +278,14 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <script>
+      gsap.to('.lead', {
+        duration: 1.5,
+        delay: 2,
+        text: 'Student | Full Stack Developer',
+      });
+    </script>
     <script>
       gsap.from('.jumbotron img', {
         duration: 1,
@@ -290,6 +299,13 @@
         y: -100,
         opacity: 0,
         ease: 'bounce',
+      });
+      gsap.from('.myname', {
+        duration: 1,
+        x: -100,
+        opacity: 0,
+        delay: 1,
+        ease: 'back',
       });
     </script>
 
